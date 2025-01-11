@@ -3,6 +3,8 @@ const crypto = require('crypto');
 
 const start = Date.now();
 
+process.env.UV_THREADPOOL_SIZE = 10
+
 setTimeout(() => console.log ('Hello from Timer 1'), 0);
 
 setImmediate(() => console.log ('Hello from Immediate Fn 1'));
